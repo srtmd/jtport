@@ -1,1 +1,148 @@
-1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Julio Macedo - Video Editor Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="res/style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-logo">
+      <i class="bi bi-file-earmark-play"></i>
+      <span>Julio Macedo</span>
+    </div>
+    <nav class="header-nav">
+      <a href="#servicos">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contato">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section class="hero-section">
+      <h1>Julio Macedo - Video Editor</h1>
+      <p>Creating awesome stories with cool video editing.</p>
+      <a href="#contato" class="contact-btn"><i class="bi bi-person-lines-fill"></i> Get in Touch</a>
+
+      <div class="shorts-grid">
+        <div class="video-embed">
+          <video id="video-player" src="res/video.mp4" title="Short 1" allowfullscreen></video>
+        </div>
+        <div class="video-embed"><iframe src="https://www.youtube.com/embed/hmH6U7WaEzY" title="Short 2" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        <div class="video-embed"><iframe src="https://www.youtube.com/embed/2Kw5vwRF1OQ" title="Short 3" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+      </div>
+    </section>
+
+    <section class="sobre-section" id="sobre-mim">
+      <h2>About Me</h2>
+      <div class="sobre-mim-container">
+        <img src="res/jota.png" alt="Julio Macedo" class="foto-perfil" />
+        <h3>Julio Macedo</h3>
+        <div class="social-buttons">
+          <a href="https://instagram.com/jotarcyt" class="social-btn"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.youtube.com/@JotaRCyt" class="social-btn"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="current-working-section">
+      <h2>Currently Working With</h2>
+      <div class="current-working">
+        <div class="channel-item">
+          <img alt="RL" src="https://yt3.ggpht.com/XwAzxUDZ_unHksXaZle3KsDMhmvdYImpIsIeAL-Ya8tEE_--cx7rY0w7pDD55_AORyhcU0YYag=s176-c-k-c0x00ffffff-no-rj-mo">
+          <div>
+            <strong>Rafa e Luiz</strong>
+          </div>
+          <div>31.7M</div>
+        </div>
+        <div class="channel-item">
+          <img alt="sam" src="res/samz.jpg">
+          <div>
+            <strong>@samzacktyler</strong>
+          </div>
+          <div>411K</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section" id="servicos">
+      <h2>My Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="bi bi-scissors"></i>
+          <h3>Video Editing</h3>
+          <p>Pro editing for channels, projects, and social media stuff.</p>
+        </div>
+        <div class="service-card">
+          <i class="bi bi-film"></i>
+          <h3>Motion Graphics</h3>
+          <p>Cool animations and visual effects to make your videos pop.</p>
+        </div>
+        <div class="service-card">
+          <i class="bi bi-music-note-beamed"></i>
+          <h3>Sound Design</h3>
+          <p>Custom audio edits and sound effects for immersive vibes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio-section" id="portfolio">
+      <h2>Some of my Work</h2>
+      <div class="portfolio-grid">
+        <div class="shorts-row">
+          <div class="shorts-embed"><iframe src="https://www.youtube.com/embed/BN1Qn_UqPFQ" title="Short 1" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+          <div class="shorts-embed"><iframe src="https://www.youtube.com/embed/xBC-_trnv8o" title="Short 2" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        </div>
+        <div class="video-embed horizontal"><iframe src="https://www.youtube.com/embed/akD1Ra1rS4E" title="Video 1" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        <div class="video-embed horizontal"><iframe src="https://www.youtube.com/embed/Up-bLv2eAbE" title="Video 2" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contato">
+      <h2>Get in Touch</h2>
+      <div class="contact-info">
+        <div>
+          <i class="bi bi-envelope"></i>
+          <a href="mailto:contato.etz@hotmail.com">contato.etz@hotmail.com</a>
+        </div>
+        <div>
+          <i class="bi bi-instagram"></i>
+          <a href="https://instagram.com/jotarcyt">@JotaRCyt</a>
+        </div>
+      </div>
+    </section>
+
+    
+  </div>
+
+  <footer>
+    <p>© 2025 Julio Macedo.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.header-nav a, .contact-btn').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+    });
+
+    // Modern video player JS
+    const video = document.getElementById('video-player');
+    video.controls = true;
+    video.addEventListener('play', () => {
+      video.classList.add('playing');
+    });
+    video.addEventListener('pause', () => {
+      video.classList.remove('playing');
+    });
+  </script>
+</body>
+</html>
